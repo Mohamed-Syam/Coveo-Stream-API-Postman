@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "78b14ecd-2182-45a5-a3ac-f48355f8e036",
+		"name": "Coveo Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Open Stream",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer DFREETTR-1b7a-DDEW-9305-4e1475261401",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-eu.cloud.coveo.com/push/v1/organizations/Your-Organization/sources/Your-Source/stream/open",
+					"protocol": "https",
+					"host": [
+						"api-eu",
+						"cloud",
+						"coveo",
+						"com"
+					],
+					"path": [
+						"push",
+						"v1",
+						"organizations",
+						"Test-ORG",
+						"sources",
+						"TEST-SOURCE",
+						"stream",
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Close Stream",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer DFREETTR-1b7a-DDEW-9305-4e1475261401",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-eu.cloud.coveo.com/push/v1/organizations/Your-ORG/sources/Your-Source/stream/01071e14-3de6-4d41-a3e8-d43cd1d04baf/close",
+					"protocol": "https",
+					"host": [
+						"api-eu",
+						"cloud",
+						"coveo",
+						"com"
+					],
+					"path": [
+						"push",
+						"v1",
+						"organizations",
+						"Test-ORG",
+						"sources",
+						"Test-SOURCE",
+						"stream",
+						"01071e14-3de6-4d41-a3e8-d43cd1d04baf",
+						"close"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Content",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-amz-server-side-encryption",
+						"value": "AES256",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/octet-stream",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/products.json"
+					},
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coveo-iprd-customerdata.s3.eu-west-1.amazonaws.com/stream/YOUR-ORG/ec9fb583-bd65-43d1-9e1f-bd6969397501/111ce67a-5866-4b75-af9e-ed4d3b13a1a9?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCWV1LXdlc3QtMSJHMEUCIDfhlax%2B7kGRVuXeboWuEX0Qw5QkBlyu9glTxDv9G%2FKtAiEAnTWpcI2Jrldr1mmy9%2BNRlPqq27GjknYk2X6A8l%2BrnxgqlgIITRAAGgw1NzE0NTE2MjM5NzUiDMTJapegiZyyCBQznirzAZdpF%2F8q765%2Bow5br%2F1I03xx9pWKQ10nAUSEPtUySvkY4D5SXwXxwh2%2FwS6pqKkhEnBbgrVAvRKEC0oIUdjWJDrvnsdAGRGlN3NeS2RTgHJg3mBCgsWgzfqZ04knFWIkf3A5AFgaBmYsHDlnjuUwPSRf5kYTW1vsrj34u5%2F84JxTTCMt8RUhrUljMPOcvPXl7hkYgYWsogpJI19ZtnLJVGmrfdgXnU3x%2Bfel5PujKjUardMkzMGNartS%2FftPhQUJimn5vTdCjVDE%2Bo%2FWkt6lcDMxh9aE29Z%2BEXGQ2YujO2hv%2B6JbT10W%2Be6d1lc286L5gNnOkTC%2B8pqQBjqaAaKRFKz1Gkhk3U3%2FohaqUnSB4Yn5b7exNoDO1LOqV3qJzuxHMJJ88U3JbhOoHLoF5Y7lpPiLe1bowhN9fmAwi9Vhw1Z1k9se3K3NpCMXArVT8rQMeExZ%2BWj6JUUfZasGSW4pF2iItGO1%2FrSvhA1%2FlE%2BtTm6%2BtsFCbgKuksRD%2BdQESBWgAUdlZxOQCk%2FuEUdLiCIwQ64oIE7t6Lk%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220211T194209Z&X-Amz-SignedHeaders=content-type%3Bhost%3Bx-amz-server-side-encryption&X-Amz-Expires=3600&X-Amz-Credential=ASIAYKDJLZITSVBFMYEY%2F20220211%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=bf70de09bbb4d5948bdfce5a468e01d3ef284524af871cf9a69f762774d3a955",
+					"protocol": "https",
+					"host": [
+						"coveo-iprd-customerdata",
+						"s3",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"stream",
+						"YOUR-ORG",
+						"ASDAD-bd65-43d1-9e1f-bd6969397501",
+						"111ce67a-5866-4b75-SADSA-ed4d3b13a1a9"
+					],
+					"query": [
+						{
+							"key": "X-Amz-Security-Token",
+							"value": "xDv9G%2FKtAiEAngqlgIITRAAGgw1NzE0NTE2MjM5NzUiDMTJapegiZyyCBQznirzAZdpF%2F8q765%2Bow5br%xwh2%2FwS6pqKkhEnBbgrVAvRKEC0oIUdjWJDrvnsdAGRGlN3NeS2RTgHJg3mBCgsWgzfqZ04knFWIkf3A5AFgaBmYsHDlnjuUwPSRf5kYTW1vsrj34u5%2F84JxTTCMt8RUhrUljMPOcvPXl7hkYgYWsogpJI19ZtnLJVGmrfdgXnU3x%2Bfel5PujKjUardMkzMGNartS%2FftPhQUJimn5vTdCjVDE%2Bo%2FWkt6lcDMxh9aE29Z%2BEXGQ2YujO2hv%2B6JbT10W%2Be6d1lc286L5gNnOkTC%2B8pqQBjqaAaKRFKz1Gkhk3U3%2FohaqUnSB4Yn5b7exNoDO1LOqV3qJzuxHMJJ88U3JbhOoHLoF5Y7lpPiLe1bowhN9fmAwi9Vhw1Z1k9se3K3NpCMXArVT8rQMeExZ%2BWj6JUUfZasGSW4pF2iItGO1%2FrSvhA1%2FlE%2BtTm6%2BtsFCbgKuksRD%2BdQESBWgAUdlZxOQCk%2FuEUdLiCIwQ64oIE7t6Lk%3D"
+						},
+						{
+							"key": "X-Amz-Algorithm",
+							"value": "AWS4-HMAC-SHA256"
+						},
+						{
+							"key": "X-Amz-Date",
+							"value": "20220211T194209Z"
+						},
+						{
+							"key": "X-Amz-SignedHeaders",
+							"value": "content-type%3Bhost%3Bx-amz-server-side-encryption"
+						},
+						{
+							"key": "X-Amz-Expires",
+							"value": "3600"
+						},
+						{
+							"key": "X-Amz-Credential",
+							"value": "ASIAYKDJLZITSVBFMYEY%2F20220211%2Feu-west-1%2Fs3%2Faws4_request"
+						},
+						{
+							"key": "X-Amz-Signature",
+							"value": "bf70de09bbb4d5948bdfce5a468e01d3ef284524af871cf9a69f762774d3a955"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
